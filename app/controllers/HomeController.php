@@ -23,7 +23,7 @@ class HomeController extends BaseController {
 			$result = Theme::getTopicFromSuggestion();
 			if(Auth::user() && !$result){
 				$themes = Theme::get();
-				return View::make('home.error', compact('themes'));				
+				return View::make('suggestions.new', compact('themes'));				
 			}elseif(!Auth::user())
 			{
 				$theme = Theme::orderBy('id','desc')->first();
