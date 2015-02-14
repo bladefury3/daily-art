@@ -61,7 +61,7 @@
         @endif
         @if(Session::has('notice'))
           <div class="alert-box">
-            {{ Session::get('message') }}
+            {{ Session::get('notice') }}
           </div>
         @endif
 
